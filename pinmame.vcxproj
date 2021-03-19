@@ -1,0 +1,853 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1874B750-EB03-3B21-8EB9-0692B08C9E04}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>pinmame</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\1\vpinball\vpinball_git\pinmame\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pinmame.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PinMAME</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\1\vpinball\vpinball_git\pinmame\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pinmame.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PinMAME</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\1\vpinball\vpinball_git\pinmame\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">pinmame.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">PinMAME</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\1\vpinball\vpinball_git\pinmame\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">pinmame.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">PinMAME</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;HAS_M6809=1;HAS_M6808=1;HAS_M6800=1;HAS_M6803=1;HAS_M6802=1;HAS_ADSP2101=1;HAS_ADSP2105=1;HAS_Z80=1;HAS_M6502=1;HAS_M65C02=1;HAS_M68000=1;HAS_M68306=1;HAS_S2650=1;HAS_8080=1;HAS_8085A=1;HAS_I8035=1;HAS_I8039=1;HAS_I86=1;HAS_I88=1;HAS_I186=1;HAS_I188=1;HAS_4004=1;HAS_PPS4=1;HAS_SCAMP=1;HAS_I8051=1;HAS_I8752=1;HAS_TMS7000=1;HAS_AT91=1;HAS_ARM7=1;HAS_CDP1802=1;HAS_TMS9980=1;HAS_TMS9995=1;HAS_COP420=1;HAS_DAC=1;HAS_YM2151_ALT=1;HAS_HC55516=1;HAS_MC3417=1;HAS_SAMPLES=1;HAS_TMS5220=1;HAS_AY8910=1;HAS_MSM5205=1;HAS_CUSTOM=1;HAS_BSMT2000=1;HAS_OKIM6295=1;HAS_ADPCM=1;HAS_VOTRAXSC01=1;HAS_SN76477=1;HAS_SN76496=1;HAS_DISCRETE=1;HAS_SP0250=1;HAS_TMS320AV120=1;HAS_M114S=1;HAS_YM3812=1;HAS_S14001A=1;HAS_YM2203=1;HAS_YM3526=1;HAS_TMS5110=1;HAS_SP0256=1;HAS_Y8950=1;HAS_ASTROCADE=1;HAS_YMF262=1;HAS_MEA8000=1;HAS_SAA1099=1;HAS_QSOUND=1;MAMEVER=7300;PINMAME;PINMAME_NO_UNUSED;LSB_FIRST;DIRECTINPUT_VERSION=0x0700;DIRECTDRAW_VERSION=0x0300;DECL_SPEC=__cdecl;NONAMELESSUNION;_MBCS;_CRT_SECURE_NO_WARNINGS;__LP64__;ZLIB_WINAPI;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;HAS_M6809=1;HAS_M6808=1;HAS_M6800=1;HAS_M6803=1;HAS_M6802=1;HAS_ADSP2101=1;HAS_ADSP2105=1;HAS_Z80=1;HAS_M6502=1;HAS_M65C02=1;HAS_M68000=1;HAS_M68306=1;HAS_S2650=1;HAS_8080=1;HAS_8085A=1;HAS_I8035=1;HAS_I8039=1;HAS_I86=1;HAS_I88=1;HAS_I186=1;HAS_I188=1;HAS_4004=1;HAS_PPS4=1;HAS_SCAMP=1;HAS_I8051=1;HAS_I8752=1;HAS_TMS7000=1;HAS_AT91=1;HAS_ARM7=1;HAS_CDP1802=1;HAS_TMS9980=1;HAS_TMS9995=1;HAS_COP420=1;HAS_DAC=1;HAS_YM2151_ALT=1;HAS_HC55516=1;HAS_MC3417=1;HAS_SAMPLES=1;HAS_TMS5220=1;HAS_AY8910=1;HAS_MSM5205=1;HAS_CUSTOM=1;HAS_BSMT2000=1;HAS_OKIM6295=1;HAS_ADPCM=1;HAS_VOTRAXSC01=1;HAS_SN76477=1;HAS_SN76496=1;HAS_DISCRETE=1;HAS_SP0250=1;HAS_TMS320AV120=1;HAS_M114S=1;HAS_YM3812=1;HAS_S14001A=1;HAS_YM2203=1;HAS_YM3526=1;HAS_TMS5110=1;HAS_SP0256=1;HAS_Y8950=1;HAS_ASTROCADE=1;HAS_YMF262=1;HAS_MEA8000=1;HAS_SAA1099=1;HAS_QSOUND=1;MAMEVER=7300;PINMAME;PINMAME_NO_UNUSED;LSB_FIRST;DIRECTINPUT_VERSION=0x0700;DIRECTDRAW_VERSION=0x0300;DECL_SPEC=__cdecl;NONAMELESSUNION;_MBCS;_CRT_SECURE_NO_WARNINGS;__LP64__;ZLIB_WINAPI;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ddraw.lib;dxguid.lib;dsound.lib;dinput64.lib;zlibstatmt64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/1/vpinball/vpinball_git/pinmame/ext/zlib/lib_vc9;D:/1/vpinball/vpinball_git/pinmame/ext/zlib/lib_vc9/$(Configuration);D:/1/vpinball/vpinball_git/pinmame/ext/dinput;D:/1/vpinball/vpinball_git/pinmame/ext/dinput/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/1/vpinball/vpinball_git/pinmame/Debug/pinmame.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/1/vpinball/vpinball_git/pinmame/Debug/PinMAME.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAS_M6809=1;HAS_M6808=1;HAS_M6800=1;HAS_M6803=1;HAS_M6802=1;HAS_ADSP2101=1;HAS_ADSP2105=1;HAS_Z80=1;HAS_M6502=1;HAS_M65C02=1;HAS_M68000=1;HAS_M68306=1;HAS_S2650=1;HAS_8080=1;HAS_8085A=1;HAS_I8035=1;HAS_I8039=1;HAS_I86=1;HAS_I88=1;HAS_I186=1;HAS_I188=1;HAS_4004=1;HAS_PPS4=1;HAS_SCAMP=1;HAS_I8051=1;HAS_I8752=1;HAS_TMS7000=1;HAS_AT91=1;HAS_ARM7=1;HAS_CDP1802=1;HAS_TMS9980=1;HAS_TMS9995=1;HAS_COP420=1;HAS_DAC=1;HAS_YM2151_ALT=1;HAS_HC55516=1;HAS_MC3417=1;HAS_SAMPLES=1;HAS_TMS5220=1;HAS_AY8910=1;HAS_MSM5205=1;HAS_CUSTOM=1;HAS_BSMT2000=1;HAS_OKIM6295=1;HAS_ADPCM=1;HAS_VOTRAXSC01=1;HAS_SN76477=1;HAS_SN76496=1;HAS_DISCRETE=1;HAS_SP0250=1;HAS_TMS320AV120=1;HAS_M114S=1;HAS_YM3812=1;HAS_S14001A=1;HAS_YM2203=1;HAS_YM3526=1;HAS_TMS5110=1;HAS_SP0256=1;HAS_Y8950=1;HAS_ASTROCADE=1;HAS_YMF262=1;HAS_MEA8000=1;HAS_SAA1099=1;HAS_QSOUND=1;MAMEVER=7300;PINMAME;PINMAME_NO_UNUSED;LSB_FIRST;DIRECTINPUT_VERSION=0x0700;DIRECTDRAW_VERSION=0x0300;DECL_SPEC=__cdecl;NONAMELESSUNION;_MBCS;_CRT_SECURE_NO_WARNINGS;__LP64__;ZLIB_WINAPI;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAS_M6809=1;HAS_M6808=1;HAS_M6800=1;HAS_M6803=1;HAS_M6802=1;HAS_ADSP2101=1;HAS_ADSP2105=1;HAS_Z80=1;HAS_M6502=1;HAS_M65C02=1;HAS_M68000=1;HAS_M68306=1;HAS_S2650=1;HAS_8080=1;HAS_8085A=1;HAS_I8035=1;HAS_I8039=1;HAS_I86=1;HAS_I88=1;HAS_I186=1;HAS_I188=1;HAS_4004=1;HAS_PPS4=1;HAS_SCAMP=1;HAS_I8051=1;HAS_I8752=1;HAS_TMS7000=1;HAS_AT91=1;HAS_ARM7=1;HAS_CDP1802=1;HAS_TMS9980=1;HAS_TMS9995=1;HAS_COP420=1;HAS_DAC=1;HAS_YM2151_ALT=1;HAS_HC55516=1;HAS_MC3417=1;HAS_SAMPLES=1;HAS_TMS5220=1;HAS_AY8910=1;HAS_MSM5205=1;HAS_CUSTOM=1;HAS_BSMT2000=1;HAS_OKIM6295=1;HAS_ADPCM=1;HAS_VOTRAXSC01=1;HAS_SN76477=1;HAS_SN76496=1;HAS_DISCRETE=1;HAS_SP0250=1;HAS_TMS320AV120=1;HAS_M114S=1;HAS_YM3812=1;HAS_S14001A=1;HAS_YM2203=1;HAS_YM3526=1;HAS_TMS5110=1;HAS_SP0256=1;HAS_Y8950=1;HAS_ASTROCADE=1;HAS_YMF262=1;HAS_MEA8000=1;HAS_SAA1099=1;HAS_QSOUND=1;MAMEVER=7300;PINMAME;PINMAME_NO_UNUSED;LSB_FIRST;DIRECTINPUT_VERSION=0x0700;DIRECTDRAW_VERSION=0x0300;DECL_SPEC=__cdecl;NONAMELESSUNION;_MBCS;_CRT_SECURE_NO_WARNINGS;__LP64__;ZLIB_WINAPI;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ddraw.lib;dxguid.lib;dsound.lib;dinput64.lib;zlibstatmt64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/1/vpinball/vpinball_git/pinmame/ext/zlib/lib_vc9;D:/1/vpinball/vpinball_git/pinmame/ext/zlib/lib_vc9/$(Configuration);D:/1/vpinball/vpinball_git/pinmame/ext/dinput;D:/1/vpinball/vpinball_git/pinmame/ext/dinput/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/1/vpinball/vpinball_git/pinmame/Release/pinmame.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/1/vpinball/vpinball_git/pinmame/Release/PinMAME.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAS_M6809=1;HAS_M6808=1;HAS_M6800=1;HAS_M6803=1;HAS_M6802=1;HAS_ADSP2101=1;HAS_ADSP2105=1;HAS_Z80=1;HAS_M6502=1;HAS_M65C02=1;HAS_M68000=1;HAS_M68306=1;HAS_S2650=1;HAS_8080=1;HAS_8085A=1;HAS_I8035=1;HAS_I8039=1;HAS_I86=1;HAS_I88=1;HAS_I186=1;HAS_I188=1;HAS_4004=1;HAS_PPS4=1;HAS_SCAMP=1;HAS_I8051=1;HAS_I8752=1;HAS_TMS7000=1;HAS_AT91=1;HAS_ARM7=1;HAS_CDP1802=1;HAS_TMS9980=1;HAS_TMS9995=1;HAS_COP420=1;HAS_DAC=1;HAS_YM2151_ALT=1;HAS_HC55516=1;HAS_MC3417=1;HAS_SAMPLES=1;HAS_TMS5220=1;HAS_AY8910=1;HAS_MSM5205=1;HAS_CUSTOM=1;HAS_BSMT2000=1;HAS_OKIM6295=1;HAS_ADPCM=1;HAS_VOTRAXSC01=1;HAS_SN76477=1;HAS_SN76496=1;HAS_DISCRETE=1;HAS_SP0250=1;HAS_TMS320AV120=1;HAS_M114S=1;HAS_YM3812=1;HAS_S14001A=1;HAS_YM2203=1;HAS_YM3526=1;HAS_TMS5110=1;HAS_SP0256=1;HAS_Y8950=1;HAS_ASTROCADE=1;HAS_YMF262=1;HAS_MEA8000=1;HAS_SAA1099=1;HAS_QSOUND=1;MAMEVER=7300;PINMAME;PINMAME_NO_UNUSED;LSB_FIRST;DIRECTINPUT_VERSION=0x0700;DIRECTDRAW_VERSION=0x0300;DECL_SPEC=__cdecl;NONAMELESSUNION;_MBCS;_CRT_SECURE_NO_WARNINGS;__LP64__;ZLIB_WINAPI;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAS_M6809=1;HAS_M6808=1;HAS_M6800=1;HAS_M6803=1;HAS_M6802=1;HAS_ADSP2101=1;HAS_ADSP2105=1;HAS_Z80=1;HAS_M6502=1;HAS_M65C02=1;HAS_M68000=1;HAS_M68306=1;HAS_S2650=1;HAS_8080=1;HAS_8085A=1;HAS_I8035=1;HAS_I8039=1;HAS_I86=1;HAS_I88=1;HAS_I186=1;HAS_I188=1;HAS_4004=1;HAS_PPS4=1;HAS_SCAMP=1;HAS_I8051=1;HAS_I8752=1;HAS_TMS7000=1;HAS_AT91=1;HAS_ARM7=1;HAS_CDP1802=1;HAS_TMS9980=1;HAS_TMS9995=1;HAS_COP420=1;HAS_DAC=1;HAS_YM2151_ALT=1;HAS_HC55516=1;HAS_MC3417=1;HAS_SAMPLES=1;HAS_TMS5220=1;HAS_AY8910=1;HAS_MSM5205=1;HAS_CUSTOM=1;HAS_BSMT2000=1;HAS_OKIM6295=1;HAS_ADPCM=1;HAS_VOTRAXSC01=1;HAS_SN76477=1;HAS_SN76496=1;HAS_DISCRETE=1;HAS_SP0250=1;HAS_TMS320AV120=1;HAS_M114S=1;HAS_YM3812=1;HAS_S14001A=1;HAS_YM2203=1;HAS_YM3526=1;HAS_TMS5110=1;HAS_SP0256=1;HAS_Y8950=1;HAS_ASTROCADE=1;HAS_YMF262=1;HAS_MEA8000=1;HAS_SAA1099=1;HAS_QSOUND=1;MAMEVER=7300;PINMAME;PINMAME_NO_UNUSED;LSB_FIRST;DIRECTINPUT_VERSION=0x0700;DIRECTDRAW_VERSION=0x0300;DECL_SPEC=__cdecl;NONAMELESSUNION;_MBCS;_CRT_SECURE_NO_WARNINGS;__LP64__;ZLIB_WINAPI;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ddraw.lib;dxguid.lib;dsound.lib;dinput64.lib;zlibstatmt64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/1/vpinball/vpinball_git/pinmame/ext/zlib/lib_vc9;D:/1/vpinball/vpinball_git/pinmame/ext/zlib/lib_vc9/$(Configuration);D:/1/vpinball/vpinball_git/pinmame/ext/dinput;D:/1/vpinball/vpinball_git/pinmame/ext/dinput/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/1/vpinball/vpinball_git/pinmame/MinSizeRel/pinmame.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/1/vpinball/vpinball_git/pinmame/MinSizeRel/PinMAME.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAS_M6809=1;HAS_M6808=1;HAS_M6800=1;HAS_M6803=1;HAS_M6802=1;HAS_ADSP2101=1;HAS_ADSP2105=1;HAS_Z80=1;HAS_M6502=1;HAS_M65C02=1;HAS_M68000=1;HAS_M68306=1;HAS_S2650=1;HAS_8080=1;HAS_8085A=1;HAS_I8035=1;HAS_I8039=1;HAS_I86=1;HAS_I88=1;HAS_I186=1;HAS_I188=1;HAS_4004=1;HAS_PPS4=1;HAS_SCAMP=1;HAS_I8051=1;HAS_I8752=1;HAS_TMS7000=1;HAS_AT91=1;HAS_ARM7=1;HAS_CDP1802=1;HAS_TMS9980=1;HAS_TMS9995=1;HAS_COP420=1;HAS_DAC=1;HAS_YM2151_ALT=1;HAS_HC55516=1;HAS_MC3417=1;HAS_SAMPLES=1;HAS_TMS5220=1;HAS_AY8910=1;HAS_MSM5205=1;HAS_CUSTOM=1;HAS_BSMT2000=1;HAS_OKIM6295=1;HAS_ADPCM=1;HAS_VOTRAXSC01=1;HAS_SN76477=1;HAS_SN76496=1;HAS_DISCRETE=1;HAS_SP0250=1;HAS_TMS320AV120=1;HAS_M114S=1;HAS_YM3812=1;HAS_S14001A=1;HAS_YM2203=1;HAS_YM3526=1;HAS_TMS5110=1;HAS_SP0256=1;HAS_Y8950=1;HAS_ASTROCADE=1;HAS_YMF262=1;HAS_MEA8000=1;HAS_SAA1099=1;HAS_QSOUND=1;MAMEVER=7300;PINMAME;PINMAME_NO_UNUSED;LSB_FIRST;DIRECTINPUT_VERSION=0x0700;DIRECTDRAW_VERSION=0x0300;DECL_SPEC=__cdecl;NONAMELESSUNION;_MBCS;_CRT_SECURE_NO_WARNINGS;__LP64__;ZLIB_WINAPI;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAS_M6809=1;HAS_M6808=1;HAS_M6800=1;HAS_M6803=1;HAS_M6802=1;HAS_ADSP2101=1;HAS_ADSP2105=1;HAS_Z80=1;HAS_M6502=1;HAS_M65C02=1;HAS_M68000=1;HAS_M68306=1;HAS_S2650=1;HAS_8080=1;HAS_8085A=1;HAS_I8035=1;HAS_I8039=1;HAS_I86=1;HAS_I88=1;HAS_I186=1;HAS_I188=1;HAS_4004=1;HAS_PPS4=1;HAS_SCAMP=1;HAS_I8051=1;HAS_I8752=1;HAS_TMS7000=1;HAS_AT91=1;HAS_ARM7=1;HAS_CDP1802=1;HAS_TMS9980=1;HAS_TMS9995=1;HAS_COP420=1;HAS_DAC=1;HAS_YM2151_ALT=1;HAS_HC55516=1;HAS_MC3417=1;HAS_SAMPLES=1;HAS_TMS5220=1;HAS_AY8910=1;HAS_MSM5205=1;HAS_CUSTOM=1;HAS_BSMT2000=1;HAS_OKIM6295=1;HAS_ADPCM=1;HAS_VOTRAXSC01=1;HAS_SN76477=1;HAS_SN76496=1;HAS_DISCRETE=1;HAS_SP0250=1;HAS_TMS320AV120=1;HAS_M114S=1;HAS_YM3812=1;HAS_S14001A=1;HAS_YM2203=1;HAS_YM3526=1;HAS_TMS5110=1;HAS_SP0256=1;HAS_Y8950=1;HAS_ASTROCADE=1;HAS_YMF262=1;HAS_MEA8000=1;HAS_SAA1099=1;HAS_QSOUND=1;MAMEVER=7300;PINMAME;PINMAME_NO_UNUSED;LSB_FIRST;DIRECTINPUT_VERSION=0x0700;DIRECTDRAW_VERSION=0x0300;DECL_SPEC=__cdecl;NONAMELESSUNION;_MBCS;_CRT_SECURE_NO_WARNINGS;__LP64__;ZLIB_WINAPI;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\1\vpinball\vpinball_git\pinmame\src;D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake;D:\1\vpinball\vpinball_git\pinmame\src\wpc;D:\1\vpinball\vpinball_git\pinmame\src\vc;D:\1\vpinball\vpinball_git\pinmame\src\windows;D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include;D:\1\vpinball\vpinball_git\pinmame\ext\dinput;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ddraw.lib;dxguid.lib;dsound.lib;dinput64.lib;zlibstatmt64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/1/vpinball/vpinball_git/pinmame/ext/zlib/lib_vc9;D:/1/vpinball/vpinball_git/pinmame/ext/zlib/lib_vc9/$(Configuration);D:/1/vpinball/vpinball_git/pinmame/ext/dinput;D:/1/vpinball/vpinball_git/pinmame/ext/dinput/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/1/vpinball/vpinball_git/pinmame/RelWithDebInfo/pinmame.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/1/vpinball/vpinball_git/pinmame/RelWithDebInfo/PinMAME.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\1\vpinball\vpinball_git\pinmame\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/1/vpinball/vpinball_git/pinmame/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\bin\CMake\bin\cmake.exe -SD:/1/vpinball/vpinball_git/pinmame -BD:/1/vpinball/vpinball_git/pinmame --check-stamp-file D:/1/vpinball/vpinball_git/pinmame/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeCCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCCompilerABI.c;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCompilerIdDetection.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCXXCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompileFeatures.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerABI.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerId.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineRCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeFindBinUtils.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeParseImplicitLinkInfo.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeRCCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCXXCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCompilerCommon.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestRCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\TI-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CompilerId\VS-10.vcxproj.in;D:\bin\CMake\share\cmake-3.19\Modules\Internal\FeatureTesting.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-Determine-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/1/vpinball/vpinball_git/pinmame/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\bin\CMake\bin\cmake.exe -SD:/1/vpinball/vpinball_git/pinmame -BD:/1/vpinball/vpinball_git/pinmame --check-stamp-file D:/1/vpinball/vpinball_git/pinmame/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeCCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCCompilerABI.c;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCompilerIdDetection.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCXXCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompileFeatures.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerABI.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerId.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineRCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeFindBinUtils.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeParseImplicitLinkInfo.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeRCCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCXXCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCompilerCommon.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestRCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\TI-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CompilerId\VS-10.vcxproj.in;D:\bin\CMake\share\cmake-3.19\Modules\Internal\FeatureTesting.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-Determine-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/1/vpinball/vpinball_git/pinmame/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\bin\CMake\bin\cmake.exe -SD:/1/vpinball/vpinball_git/pinmame -BD:/1/vpinball/vpinball_git/pinmame --check-stamp-file D:/1/vpinball/vpinball_git/pinmame/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeCCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCCompilerABI.c;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCompilerIdDetection.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCXXCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompileFeatures.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerABI.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerId.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineRCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeFindBinUtils.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeParseImplicitLinkInfo.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeRCCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCXXCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCompilerCommon.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestRCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\TI-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CompilerId\VS-10.vcxproj.in;D:\bin\CMake\share\cmake-3.19\Modules\Internal\FeatureTesting.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-Determine-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/1/vpinball/vpinball_git/pinmame/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\bin\CMake\bin\cmake.exe -SD:/1/vpinball/vpinball_git/pinmame -BD:/1/vpinball/vpinball_git/pinmame --check-stamp-file D:/1/vpinball/vpinball_git/pinmame/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeCCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\3.19.4\CMakeSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCCompilerABI.c;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeCompilerIdDetection.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCXXCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompileFeatures.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerABI.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerId.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineRCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeFindBinUtils.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeParseImplicitLinkInfo.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeRCCompiler.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCXXCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestCompilerCommon.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CMakeTestRCCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\TI-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\bin\CMake\share\cmake-3.19\Modules\CompilerId\VS-10.vcxproj.in;D:\bin\CMake\share\cmake-3.19\Modules\Internal\FeatureTesting.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-Determine-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\bin\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\1\vpinball\vpinball_git\pinmame\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\artwork.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\artwork.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\audit.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\audit.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cheat.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cheat.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\common.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\common.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\config.c">
+      <ObjectFileName>$(IntDir)/src/config.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\config.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\adsp2100\2100dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\adsp2100\adsp2100.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\adsp2100\adsp2100.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\arm7\arm7.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\arm7\arm7.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\arm7\arm7dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\at91\at91.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\at91\at91.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\at91\at91dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\cdp1802\1802dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\cdp1802\cdp1802.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\cdp1802\cdp1802.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\cop400\410ops.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\cop400\420ops.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\cop400\cop400.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\cop400\cop420.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\cop400\cop420ds.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i86\i86.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i86\i86.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i86\i86dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i4004\4004dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i4004\i4004.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i4004\i4004.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i8039\8039dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i8039\i8039.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i8039\i8039.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i8051\8051dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i8051\i8051.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i8051\i8051.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i8085\8085dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i8085\i8085.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\i8085\i8085.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m6502\6502dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m6502\m6502.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m6502\m6502.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m6800\6800dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m6800\m6800.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m6800\m6800.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m6809\6809dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m6809\m6809.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m6809\m6809.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake\m68kopac.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake\m68kops.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake\m68kopdm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake\m68kopnz.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\generated_by_m68kmake\m68kops.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\m68kcpu.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\m68kcpu.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\m68kdasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\m68kmame.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\m68000\m68kmame.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\pps4\pps4.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\pps4\pps4.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\pps4\pps4dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\s2650\2650dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\s2650\s2650.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\s2650\s2650.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\scamp\scamp.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\scamp\scamp.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\scamp\scampdsm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\tms7000\7000dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\tms7000\tms7000.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\tms7000\tms7000.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\tms9900\9900dasm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\tms9900\tms9900.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\tms9900\tms9900.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\tms9900\tms9980a.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\tms9900\tms9995.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\z80\z80.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\z80\z80.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\z80\z80dasm.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpu\z80\z80dasm.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpuexec.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpuexec.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpuint.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpuint.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\cpuintrf.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\cpuintrf.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\datafile.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\datafile.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\drawgfx.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\drawgfx.h" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\driver.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\fileio.c">
+      <ObjectFileName>$(IntDir)/src/fileio.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\fileio.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\harddisk.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\harddisk.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\hash.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\hash.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\hiscore.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\hiscore.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\info.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\info.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\inptport.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\inptport.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\input.c">
+      <ObjectFileName>$(IntDir)/src/input.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\input.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\4094.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\4094.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\6522via.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\6522via.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\6530riot.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\6530riot.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\6532riot.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\6532riot.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\6821pia.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\6821pia.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\8255ppi.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\8255ppi.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\eeprom.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\eeprom.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\i8155.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\i8155.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\mathbox.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\mathbox.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\pic8259.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\pic8259.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\ticket.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\ticket.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\z80fmly.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\machine\z80fmly.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\mame.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\mame.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\mamedbg.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\mamedbg.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\md5.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\md5.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\memory.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\memory.h" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\osdepend.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\palette.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\palette.h" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\pinmame.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\png.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\png.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\profiler.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\profiler.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sha1.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sha1.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sndintrf.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sndintrf.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\262intf.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\262intf.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\2151intf.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\2151intf.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\2203intf.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\2203intf.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\3812intf.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\3812intf.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\5110intf.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\5110intf.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\5220intf.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\5220intf.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\adpcm.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\adpcm.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\astrocde.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\astrocde.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\ay8910.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\ay8910.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\bsmt2000.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\bsmt2000.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\dac.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\dac.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\discrete.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\discrete.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\filter.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\filter.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\fm.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\fm.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\fmopl.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\fmopl.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\hc55516.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\hc55516.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\m114s.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\m114s.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\mc3417.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\mc3417.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\mea8000.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\mea8000.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\mixer.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\mixer.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\msm5205.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\msm5205.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\qsound.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\qsound.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\s14001a.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\s14001a.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\saa1099.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\saa1099.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\samples.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\samples.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\sn76477.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\sn76477.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\sn76496.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\sn76496.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\sp0250.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\sp0250.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\sp0256.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\sp0256.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\streams.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\streams.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\tms320av120.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\tms320av120.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\tms5110.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\tms5110.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\tms5220.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\tms5220.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\votrax.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\votrax.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\ym2151.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\ym2151.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\ymdeltat.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\ymdeltat.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\ymf262.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\sound\ymf262.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\state.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\state.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\tilemap.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\tilemap.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\timer.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\timer.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\ui_text.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\ui_text.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\unzip.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\unzip.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\usrintrf.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\usrintrf.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\version.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\vidhrdw\avgdvg.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\vidhrdw\avgdvg.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\vidhrdw\crtc6845.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\vidhrdw\crtc6845.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\vidhrdw\generic.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\vidhrdw\generic.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\vidhrdw\tms9928a.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\vidhrdw\tms9928a.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\vidhrdw\vector.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\vidhrdw\vector.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\window.c">
+      <ObjectFileName>$(IntDir)/src/window.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\window.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\allied.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\alvg.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\alvg.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\alvgdmd.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\alvgdmd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\alvggames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\alvgs.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\alvgs.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\atari.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\atari.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\atarigames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\atarisnd.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\barni.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\bingo.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\boomerang.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\bowarrow.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\bowlgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\by35.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\by35.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\by35games.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\by35snd.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\by35snd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\by6803.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\by6803.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\by6803games.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\by68701.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\byvidgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\byvidpin.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\byvidpin.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\capcom.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\capcom.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\capcoms.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\capcoms.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\capgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\core.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\core.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\dedmd.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\dedmd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\degames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\desound.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\desound.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\driver.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\efo.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\efosnd.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\flicker.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gen.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gp.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gp.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gpgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gpsnd.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gpsnd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts1.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts1.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts1games.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts3.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts3.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts3dmd.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts3dmd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts3games.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts80.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts80.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts80games.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts80s.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\gts80s.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\hnkgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\hnks.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\hnks.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\icecoldbeer.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\idsa.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\inder.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\inder.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\indergames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\inderp.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\jeutel.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\joctronic.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\jp.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\jp.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\jpgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\jvh.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\kissproto.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\lancelot.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\ltd.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\ltd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\ltdgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\luckydraw.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\mac.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\mech.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\mech.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\mephisto.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\micropin.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\mrgame.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\mrgame.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\mrgamegames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\nsm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\nuova.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\peyper.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\peyper.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\peypergames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\play.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\play.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\playgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\playsnd.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\regama.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\rotation.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\rowamet.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s3games.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s4.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s4.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s4games.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s6.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s6.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s6games.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s7.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s7.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s7games.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s11.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s11.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\s11games.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\se.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\se.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\segames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sim.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sim.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\sttng.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\fh.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\jd.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\bop.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\ft.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\gw.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\afm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\tz.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\taf.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\pz.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\t2.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\ngg.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\dd_wpc.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\cftbl.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\mm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\br.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\wcs.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\hd.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\drac.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\ss.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\ww.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\ij.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\tom.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\rs.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\hurr.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\gi.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\full\dm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\cp.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\ts.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\pop.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\wd.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\jm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\i500.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\nbaf.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\corv.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\fs.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\sc.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\mb.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\totan.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\congo.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\nf.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\jb.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\cv.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\dw.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\dh.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\cc.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\wpc\prelim\jy.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\se\prelim\monopoly.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\se\prelim\elvis.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\se\prelim\harley.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\s11\full\dd.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\s11\full\milln.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\s11\prelim\eatpm.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\s7\full\bk.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sims\s7\full\tmfnt.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\slalom.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sleic.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sleic.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sleicgames.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\snd_alt.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\snd_cmd.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\snd_cmd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sndbrd.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\sndbrd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\spectra.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\spinb.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\spinb.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\spinbgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\spiritof76.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\stargame.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\stgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\stsnd.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\stsnd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\tabart.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\taito.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\taito.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\taitogames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\taitos.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\taitos.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\techno.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\vd.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\vpintf.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\vpintf.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\wico.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\wmssnd.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\wmssnd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\wpc.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\wpc.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\wpcgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\wpcsam.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\wpcsam.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\zac.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\zac.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\zacgames.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\zacproto.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\zacsnd.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\wpc\zacsnd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\vc\dirent.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\vc\dirent.h" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\vc\unistd.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\blit.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\blit.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\config.c">
+      <ObjectFileName>$(IntDir)/src/windows/config.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\d3d_extra.h" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\dirty.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\fileio.c">
+      <ObjectFileName>$(IntDir)/src/windows/fileio.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\fronthlp.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\input.c">
+      <ObjectFileName>$(IntDir)/src/windows/input.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\jit.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\jit.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\jitemit.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\jitemit.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\misc.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\misc.h" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\msc.h" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\osd_cpu.h" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\osinline.h" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\pattern.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\rc.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\rc.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\sound.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\ticker.c" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\video.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\video.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\wind3d.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\wind3d.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\wind3dfx.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\wind3dfx.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\winddraw.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\winddraw.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\window.c">
+      <ObjectFileName>$(IntDir)/src/windows/window.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\window.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\winmain.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\src\windows\winprefix.h" />
+    <ClCompile Include="D:\1\vpinball\vpinball_git\pinmame\ext\vgm\vgmwrite.c" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\ext\vgm\vgmwrite.h" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include\zconf.h" />
+    <ClInclude Include="D:\1\vpinball\vpinball_git\pinmame\ext\zlib\include\zlib.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
