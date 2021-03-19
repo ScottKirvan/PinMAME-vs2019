@@ -3,6 +3,13 @@
 .vs/*
 x64/*
 obj/*
+CMakeFiles/*
+Debug/*
+release/*.dll
+release/*.exe
+release/*.exp
+release/*.lib
+
 InstallVPinMAME_VC2019.vcxproj
 InstallVPinMAME_VC2019.vcxproj.filters
 InstallVPinMAME_VC2019d.exe
