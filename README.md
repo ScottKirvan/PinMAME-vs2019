@@ -6,13 +6,13 @@ folder (very glad those were there!) and restructured the projects a bit.
 I needed this in order to do some debugging for work I'm doing on the [Unreal-Visual-Pinball](https://github.com/ScottKirvan/Unreal-Visual-Pinball) project.
 
 ## Install/build:
-install VisualStudio (2019)  (I use the Community edition)
-install the "Visual C++ ATL SUpport" - 
-install [nasm](https://www.nasm.us/)  
-add nasm to your ```%PATH%  ```
-launch vs2019 - open a terminal and type ```nasm -v``` to see if nasm is installed properly  
-open ```pinmame.sln```
-Build Solution
+install VisualStudio (2019)  (I use the Community edition)  
+install the "Visual C++ ATL SUpport"   
+install [nasm](https://www.nasm.us/)   
+add nasm to your ```%PATH%  ```  
+launch vs2019 - open a terminal and type ```nasm -v``` to see if nasm is installed properly    
+open ```pinmame.sln```  
+Build Solution  
 
 
 original README.md:
