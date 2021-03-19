@@ -1,17 +1,21 @@
-# PinMAME - ScottKirvan/PinMAME fork
+# PinMAME - ScottKirvan/PinMAME-vs2019 fork
+To be able to quickly get up and running in vs2019 (which I couldn't do with the existing
+project), I just rebuilt all the Visual Studio projects using the cmake files in the ```cmake``` 
+folder (very glad those were there!) and restructured the projects a bit.  
+
+I needed this in order to do some debugging for work I'm doing on the [Unreal-Visual-Pinball](https://github.com/ScottKirvan/Unreal-Visual-Pinball) project.
 
 ## Install/build:
-install VisualStudio (2019)  
+install VisualStudio (2019)  (I use the Community edition)
 install the "Visual C++ ATL SUpport" - 
 install [nasm](https://www.nasm.us/)  
-add nasm to your %PATH%  
-launch vs2019 - open a terminal and type "nasm -v" to see if nasm is installed properly  
-you may need DX - I have 12 installed already - the directions I saw online called for DX7  
-run create_vc2019_from_vc2012.bat
-open PinMAME_VC2019.sln
+add nasm to your ```%PATH%  ```
+launch vs2019 - open a terminal and type ```nasm -v``` to see if nasm is installed properly  
+open ```pinmame.sln```
 Build Solution
 
 
+original README.md:
    ---
 
 # PinMAME
