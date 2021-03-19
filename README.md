@@ -1,3 +1,19 @@
+# PinMAME - ScottKirvan/PinMAME fork
+
+## Install/build:
+install VisualStudio (2019)  
+install the "Visual C++ ATL SUpport" - 
+install [nasm](https://www.nasm.us/)  
+add nasm to your %PATH%  
+launch vs2019 - open a terminal and type "nasm -v" to see if nasm is installed properly  
+you may need DX - I have 12 installed already - the directions I saw online called for DX7  
+run create_vc2019_from_vc2012.bat
+open PinMAME_VC2019.sln
+Build Solution
+
+
+   ---
+
 # PinMAME
 
 *Pinball Multiple Arcade Machine Emulator*
