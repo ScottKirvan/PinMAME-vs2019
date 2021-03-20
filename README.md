@@ -20,7 +20,12 @@ into your ```Debug``` or ```release```
 folders before you run ```Setup64.exe``` or
 you'll get errors when the system tries to register (install) the dll COM objects.
 
-
+## Visual Studio Projects
+- instvpm -> Setup64.exe - app that registers VPinMAME as a Windows COM object.
+- pinmame ->  PinMAME.exe - Console app - emulation from the command line.
+- pinmame32 -> PinMAME32.exe - Windows GUI app - emulate and test roms .
+- vpinmame - VPinMAME64.dll - COM object - emulates roms and can hook into external apps.  
+- libpinmame - libpinmame-3.4.dll - not sure - this may be a more standard dll linkage as an alternative to using COM.
 
 ---
 Original README.md:
